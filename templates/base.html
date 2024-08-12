@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Blogly{% endblock %}</title>
+    <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="{{ url_for('static', filename='styles.css') }}" -->
+    <!-- /> -->
+    <!-- Include any additional CSS or JavaScript files here -->
+  </head>
+  <body>
+    <header>
+      <h1>Blogly</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('users_index') }}">Home</a></li>
+          <li><a href="{{ url_for('users_new_form') }}">Add User</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      <!-- Default content or page-specific content will be inserted here -->
+      {% endblock %}
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Blogly App</p>
+    </footer>
+  </body>
+</html>
